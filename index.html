@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Borrowl : Borrow Book's Online</title>
+    <link rel="stylesheet" href="style/main.css" />
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+  </head>
+  <body>
+    <section class="home" style="margin-bottom: 3.5rem">
+      <!-- Nav Start -->
+      <nav class="navbar navbar-expand-lg bg-transparent">
+        <div class="container">
+          <a href="index.html"> <img src="img/logo.svg" alt="" style="height: 40px" /></a>
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link active fw-light" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-light" href="#">Books</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-light" href="#">Location</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-light" href="#">Contact</a>
+            </li>
+          </ul>
+          <button class="btn btn-outline-light login-btn" data-bs-toggle="modal" data-bs-target="#myModal" id="loginBtn">LOGIN</button>
+      
+          <div class="dropdown d-none" id="hello">
+            <a class="dropdown-toggle text-decoration-none" href="#" role="button" id="dropdownMenuClickable" data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false">
+              <span id="user" class="text-white mx-1"></span>
+              <img src="img/user-avatar.svg" width="40" alt="" />
+            </a>
+      
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickable">
+              <li>
+                <a class="dropdown-item" href="bookshelf_page.html">
+                  <img src="img/bookshelf.svg" width="30" alt="" />
+                  <span class="text-primary fs-6">My Bookshelf</span>
+                </a>
+              </li>
+              <li>
+                <a onclick="logOut();" class="dropdown-item" href="#">
+                  <img src="img/log-out-icon.svg" class="img-fluid" width="30" alt="" />
+                  <span " class="text-secondary fs-6">Log Out</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+      
+          <div class="modal fade" id="myModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form class="px-3" onsubmit="signIn(event);" autocomplete="off">
+                    <div class="mb-3">
+                      <label class="form-label text-black">Username</label>
+                      <input type="text" class="form-control" id="username" required/>
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label text-black">Password</label>
+                      <input type="password" class="form-control" id="password" required/>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 login-btn" id="login-btn">LOGIN</button>
+                  </form>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                  <span>Don't have an account ? <a href="sign-up.html">Sign Up</a> for free</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- Nav End -->
+      <div class="hero">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-5 col-md-7">
+              <div class="img-wrapper d-flex align-items-end">
+                <img src="img/hero-img.png" alt="" class="img-hero" />
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-5">
+              <div class="container d-flex align-content-center h-100 row">
+                <div class="fw-bolder fs-1 text-white">“books may well be the only true magic”</div>
+                <div class="my-3 fw-normal fs-4 text-white">- Alice Hoffman</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about text-black">
+      <div class="container">
+        <div class="row align-items-start">
+          <div class="col-lg-6 ">
+            <div class="container d-flex align-content-center row h-100">
+              <div class="fs-1 fw-bold mb-3 text-primary">Do You Know ?</div>
+              <div class="fs-3 fw-bold text-black">While reading, our eyes can move in different directions</div>
+              <div class="mt-2 fs-6">
+                <span >It sounds like a health condition, doesn’t it? Well, it’s not strabismus. It’s a completely normal thing in healthy adults with 20-20 vision. <br>
+
+                  While reading, our eyes usually target different letters at once. Actually, that happens almost 50% of the time we spend reading. It’s a mechanism that helps us read and understand faster, which starts developing as soon as we start learning to read. <br>
+                  
+                   
+                  
+                  from that you know that reading, can give you a lot of information that may you don’t know before. So, let’s reading more to discovere more your knowledge! 
+              </div>
+              <div class="mt-4"></div>
+              <button class="btn btn-danger text-center w-50 fw-bold">DISCOVER MORE</button>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="img-wrapper d-flex align-items-end justify-content-center">
+              <img src="img/about-img.svg" alt="" class="img-about" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="modal fade" id="myModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form class="px-3" onsubmit="signIn(event);" autocomplete="off">
+              <div class="mb-3">
+                <label class="form-label text-black">Username</label>
+                <input type="text" class="form-control" id="username" required/>
+              </div>
+              <div class="mb-3">
+                <label class="form-label text-black">Password</label>
+                <input type="password" class="form-control" id="password" required/>
+              </div>
+              <button type="submit" class="btn btn-primary w-100 login-btn" id="login-btn">LOGIN</button>
+            </form>
+          </div>
+          <div class="modal-footer d-flex justify-content-center">
+            <span>Don't have an account ? <a href="sign-up.html">Sign Up</a> for free</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="style/node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+  <script src="style/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/sign_in.js"></script>
+</html>

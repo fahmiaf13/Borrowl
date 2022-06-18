@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style/main.css" />
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+  </head>
+  <body class="body-sign-up">
+    <section class="sign-up">
+      <nav class="navbar bg-transparent">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img src="img/logo.svg" alt="" height="40" />
+          </a>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-7 justify-content-center align-items-center pt-4">
+            <div class="text-white fs-1 fw-bold">“Find your favourite book and bring it home”</div>
+            <img src="img/sign-up-hero.png" alt="" class="img-fluid" />
+          </div>
+          <div class="col-5">
+            <div class="container brd bg-white">
+              <div class="sign-up-form">
+                <form class="px-3" onsubmit="signUp(event);" autocomplete="off">
+                  <div class="text-secondary fs-5 fw-bold pt-3">Let's Get Started</div>
+                  <div class="fw-bolder py-3 fs-3 text-primary">Create An Account</div>
+                  <div class="mb-3">
+                    <label class="form-label text-black">First Name</label>
+                    <input type="text" class="form-control" id="firstname" required />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label text-black">Last Name</label>
+                    <input type="text" class="form-control" id="lastname" required />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label text-black">Username</label>
+                    <input type="text" class="form-control" id="username" required />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label text-black">Password</label>
+                    <input type="password" class="form-control" id="password" required />
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100 login-btn fw-bold">SIGN UP</button>
+                </form>
+                <div class="d-flex justify-content-center py-3">
+                  <span>already have an account ? <a href="index.html">Sign In</a></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="style/node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="style/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="js/sign_up.js"></script>
+  </body>
+</html>

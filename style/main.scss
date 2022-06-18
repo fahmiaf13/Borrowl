@@ -1,0 +1,149 @@
+$primary: #368b85;
+$secondary: #d82148;
+$danger: #d82148;
+$white: #fafafa;
+$black: #464660;
+$light: #e5e5e5;
+
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/maps";
+@import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/root";
+@import "node_modules/bootstrap/scss/utilities";
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/type";
+@import "node_modules/bootstrap/scss/images";
+@import "node_modules/bootstrap/scss/containers";
+@import "node_modules/bootstrap/scss/grid";
+@import "node_modules/bootstrap/scss/helpers";
+@import "node_modules/bootstrap/scss/utilities/api";
+@import "node_modules/bootstrap/scss/buttons";
+@import "node_modules/bootstrap/scss/navbar";
+@import "node_modules/bootstrap/scss/nav";
+@import "node_modules/bootstrap/scss/dropdown";
+@import "node_modules/bootstrap/scss/modal";
+@import "node_modules/bootstrap/scss/forms";
+@import "node_modules/bootstrap/scss/close";
+@import "node_modules/bootstrap/scss/transitions";
+@import "node_modules/bootstrap/scss/offcanvas";
+
+body {
+  font-family: "poppins";
+  background-color: #e5e5e5;
+}
+.body-sign-up {
+  background-color: #368b85;
+  overflow: hidden;
+}
+.home {
+  background-color: #368b85;
+}
+.nav-link {
+  color: #f5f5f5;
+}
+.btn {
+  --bs-btn-padding-x: 2rem;
+  --bs-btn-padding-y: 0.375rem;
+  --bs-btn-font-family: ;
+  --bs-btn-font-size: 1rem;
+  --bs-btn-font-weight: 300;
+  --bs-btn-line-height: 1.5;
+  --bs-btn-border-width: 1px;
+  --bs-btn-border-radius: 30px;
+  --bs-btn-box-shadow: inset 0 1px 0 rgba(241, 233, 229, 0.15), 0 1px 1px rgba(70, 70, 96, 0.075);
+  --bs-btn-disabled-opacity: 0.65;
+  --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), 0.5);
+}
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+.btn-close {
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.btn-dark {
+  --bs-btn-bg: #464660;
+}
+.dropdown-menu {
+  --bs-dropdown-link-active-bg: #368b8585;
+  --bs-dropdown-link-hover-bg: #368b8540;
+}
+
+.nav-item {
+  padding: 0 1rem;
+}
+
+.img-wrapper {
+  justify-content: center;
+  width: 100%;
+  height: calc(100vh - 56px);
+  .img-hero {
+    width: 75%;
+  }
+  .img-about {
+    width: 100%;
+    height: 100%;
+  }
+}
+.login-btn {
+  letter-spacing: 3px;
+}
+.brd {
+  border-radius: 30px;
+}
+
+.myCard {
+  max-height: 300px;
+  width: 300px;
+}
+.btn-product {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.available {
+  background-color: #d82148;
+  color: #f1e9e5;
+  padding: 0 1rem;
+  border-radius: 20px;
+}
+.img-wrapper-product {
+  display: flex;
+  justify-content: center;
+  height: 50%;
+  width: 50%;
+}
+.img-product {
+  object-fit: contain;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+.dropdown-menu.show {
+  right: 0;
+  left: auto;
+  display: block;
+  width: 200px;
+  height: auto;
+}
+
+.wrapper-item {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #368b85;
+  border-radius: 10px;
+}
+
+// .dropdown:hover .dropdown-menu {
+//   right: 0;
+//   left: auto;
+//   display: block;
+//   margin-top: 0; // remove the gap so it doesn't close
+// }
+
+// mouse
