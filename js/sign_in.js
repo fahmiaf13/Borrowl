@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function userPage() {
   function findIndexUser() {
     for (const index in formObj)
       if (formObj[index].isLogin === true) {
-        return formObj[index].userName;
+        return formObj[index];
       }
     return false;
   }
@@ -18,18 +18,33 @@ document.addEventListener("DOMContentLoaded", function userPage() {
   const usernamePage = findIndexUser();
 
   const nameOfUser = document.getElementById("user");
+  const imgOfUserMd = document.getElementById("userImgMobile");
+
   const userWrap = document.getElementById("hello");
+  const userWrapMd = document.getElementById("nameMobile");
+  const nameWrapMd = document.getElementById("userNameMobile");
+
+  const logInBtn = document.getElementById("loginBtn_mobile");
+  const logOutBtn = document.getElementById("logoutBtn_mobile");
   const loginBtnWeb = document.getElementById("loginBtn");
 
   if (exist) {
     loginBtnWeb.classList.add("d-none");
+    logOutBtn.classList.remove("d-none");
+    logInBtn.classList.add("d-none");
     userWrap.classList.remove("d-none");
+    imgOfUserMd.classList.remove("d-none");
   } else {
     loginBtnWeb.classList.remove("d-none");
+    logInBtn.classList.remove("d-none");
+    logOutBtn.classList.add("d-none");
     userWrap.classList.add("d-none");
+    imgOfUserMd.classList.add("d-none");
     location.reload();
   }
-  nameOfUser.innerHTML = usernamePage;
+  nameOfUser.innerHTML = usernamePage.userName;
+  userWrapMd.innerHTML = usernamePage.firstName + " " + usernamePage.lastName;
+  nameWrapMd.innerHTML = usernamePage.userName;
 });
 
 function signIn(Event) {

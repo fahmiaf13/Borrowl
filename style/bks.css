@@ -9970,10 +9970,11 @@ body {
   height: calc(100vh - 56px);
 }
 .img-wrapper .img-hero {
-  width: 70%;
+  width: 75%;
 }
 .img-wrapper .img-about {
   width: 100%;
+  height: 100%;
 }
 
 .login-btn {
@@ -10033,6 +10034,150 @@ body {
   border-radius: 10px;
 }
 
+#menu__toggle {
+  opacity: 0;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  right: 0;
+}
+
+#menu__toggle:checked ~ .menu__overlay {
+  visibility: visible;
+  right: 0;
+}
+
+.menu__overlay {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: black;
+  opacity: 40%;
+  z-index: 1;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+.menu__btn {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #fafafa;
+  transition-duration: 0.25s;
+}
+
+.menu__btn > span::before {
+  content: "";
+  top: -8px;
+}
+
+.menu__btn > span::after {
+  content: "";
+  top: 8px;
+}
+
+.menu__box {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  right: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  list-style: none;
+  background-color: #fafafa;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+  transition-duration: 0.5s;
+  z-index: 2;
+}
+
+.menu__box ul li {
+  display: block;
+  padding: 12px 24px;
+}
+
+.menu__box li a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 300;
+  color: #393e46;
+}
+
+.menu-login {
+  background-color: #368b85;
+  font-weight: 300;
+  font-size: 20px;
+  max-width: 100%;
+  height: 30%;
+}
+.menu-login .user-wrap {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+}
+.menu-login .user-info {
+  display: inline-flex;
+}
+
+.nav-item li a img {
+  width: 30px;
+}
+
+.menu__box li:hover {
+  background-color: rgba(54, 139, 133, 0.5019607843);
+}
+
+@media screen and (max-width: 992px) {
+  .menu-item li,
+.nav,
+.login-btn,
+#hello {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: inline;
+  }
+}
 body {
   background-color: #e5e5e5;
 }
