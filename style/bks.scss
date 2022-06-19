@@ -51,6 +51,11 @@ ul {
   width: 100%;
   height: 425px;
   padding: 1rem 3rem;
+  #listBuku,
+  #selesaiDibaca {
+    max-height: 300px;
+    overflow: auto;
+  }
   .listBuku {
     background-color: $light;
     border-radius: 20px;
@@ -101,7 +106,7 @@ ul {
   text-align: center;
   display: inline-block; /* important */
   white-space: nowrap;
-  overflow: hidden;
+
   text-overflow: ellipsis;
 }
 

@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const submitBook = document.getElementById("form");
   submitBook.addEventListener("submit", function (e) {
-    document.querySelector("form").reset();
     e.preventDefault();
     addBooks();
   });
@@ -175,20 +174,34 @@ document.addEventListener("DOMContentLoaded", function userPage() {
   const usernamePage = findIndexUser();
 
   const nameOfUser = document.getElementById("user");
-  const userWrap = document.getElementById("userBadge");
-  const loginBtn = document.getElementById("loginBtn");
-  const helloUser = document.getElementById("helloUser");
+  const imgOfUserMd = document.getElementById("userImgMobile");
+
+  const userWrap = document.getElementById("hello");
+  const userWrapMd = document.getElementById("nameMobile");
+  const nameWrapMd = document.getElementById("userNameMobile");
+
+  const logInBtn = document.getElementById("loginBtn_mobile");
+  const logOutBtn = document.getElementById("logoutBtn_mobile");
+  const loginBtnWeb = document.getElementById("loginBtn");
 
   if (exist) {
-    loginBtn.classList.add("d-none");
+    loginBtnWeb.classList.add("d-none");
+    logOutBtn.classList.remove("d-none");
+    logInBtn.classList.add("d-none");
     userWrap.classList.remove("d-none");
+    imgOfUserMd.classList.remove("d-none");
   } else {
-    loginBtn.classList.remove("d-none");
+    loginBtnWeb.classList.remove("d-none");
+    logInBtn.classList.remove("d-none");
+    logOutBtn.classList.add("d-none");
     userWrap.classList.add("d-none");
+    imgOfUserMd.classList.add("d-none");
     location.reload();
   }
   nameOfUser.innerHTML = usernamePage.userName;
   helloUser.innerHTML = usernamePage.firstName + " " + usernamePage.lastName;
+  userWrapMd.innerHTML = usernamePage.firstName + " " + usernamePage.lastName;
+  nameWrapMd.innerHTML = usernamePage.userName;
 });
 
 function logOut() {
